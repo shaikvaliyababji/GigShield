@@ -1,8 +1,8 @@
 # 🛡️ GigShield AI
-**Team Name:** API ARCHITECTS
-**Persona:** Food Delivery Partners (Zomato/Swiggy)
-**Phase:** 1 - Ideation & Foundation
-**Video Pitch:** [Link to your 2-minute video]
+**Team Name:** API ARCHITECTS.
+**Persona:** Food Delivery Partners (Zomato/Swiggy).
+**Phase:** 1 - Ideation & Foundation.
+**Video Pitch:** [Link to your 2-minute video].
 
 # GigShield AI – AI-Hybrid Resilience Insurance
 
