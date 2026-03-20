@@ -166,6 +166,23 @@ Where:
 
 ---
 
+### 🔹 AI Model Flow (Concrete Implementation)
+
+**Input Features:**
+- rainfall forecast (mm)
+- temperature
+- AQI levels
+- traffic speed
+- historical disruption frequency per zone
+
+**Processing:**
+- Machine Learning model (Random Forest / Gradient Boosting)
+- outputs a risk score between 0–1
+
+**Output:**
+- Risk Tier (1–5)
+- Premium adjustment via AI Multiplier
+
 ## 10. System Workflow
 
 1. User registers  
@@ -178,6 +195,12 @@ Where:
 8. Instant payout  
 
 ---
+
+## 10.1 Data Flow (Technical Pipeline)
+
+Weather API → Risk Engine → Zone Tier Update  
+User Location → Trigger Engine → Claim Creation  
+Claim → Fraud Engine → Confidence Score → Payout / Hold
 
 ## 11. Tech Stack
 
@@ -212,7 +235,11 @@ Where:
 
 - Mock trigger engine:
   - simulate rain / flood events  
+### Execution Logic
 
+- Disruption triggers evaluated every **5 minutes**
+- Zone risk updated **weekly using forecast data**
+- Claims processed in **real-time pipeline**
 ---
 
 ## 13. System Architecture
@@ -227,6 +254,13 @@ Payment Gateway (Razorpay Test Mode)
 
 ---
 
+## Business Sustainability
+
+- High-risk zones → higher premiums  
+- Low-risk weeks → reduced pricing  
+- Safety Valve ensures affordability  
+
+This maintains a **balanced loss ratio**, ensuring long-term viability.
 ## 14. Dashboards
 
 ### Worker Dashboard
@@ -295,7 +329,13 @@ To build a scalable, intelligent insurance platform that ensures gig workers nev
 
 ## 19. 🛡️ Adversarial Defense & Anti-Spoofing Strategy  
 ### (2026 Market Crash Protocol)
+### Post-Detection Actions (Liquidity Protection)
 
+- Suspicious claims → temporarily **frozen**
+- Fraud clusters → **rate-limited**
+- High-risk accounts → moved to **manual audit**
+
+This ensures the system prevents **mass payout drain during coordinated attacks**.
 ---
 
 ## 19.1 Context: 2026 Systemic Fraud
