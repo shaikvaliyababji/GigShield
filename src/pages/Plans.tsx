@@ -145,7 +145,7 @@ export default function Plans() {
     if (!user || !selectedPlan) return;
     setIsUpdating(true);
     try {
-      const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
+      const API_URL = import.meta.env.VITE_API_URL || "https://gigshieldbackend.onrender.com";
       const resp = await fetch(`${API_URL}/workers/${user.id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },

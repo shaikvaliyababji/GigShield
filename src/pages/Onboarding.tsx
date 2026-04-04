@@ -9,7 +9,7 @@ import {
 
 type AuthView = 'login' | 'signup' | 'forgot' | 'success';
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
+const API_URL = import.meta.env.VITE_API_URL || "https://gigshieldbackend.onrender.com";
 
 const adminLogins = ['admin@gigshield.ai', 'ops@gigshield.ai', 'abhi@gigshield.ai', 'adminx'];
 
