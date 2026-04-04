@@ -1,0 +1,104 @@
+{
+  "workers": [
+    {
+      "id": "W1001",
+      "name": "Ravi Kumar",
+      "phone": "9876543210",
+      "city": "Bengaluru",
+      "pincode": "560001",
+      "zone": "Central",
+      "tier": 3,
+      "weekly_earnings": 1800,
+      "trust_score": 85,
+      "premium": 25,
+      "safety_valve_active": true
+    }
+  ],
+  "disruptions": [
+    {
+      "id": "D101",
+      "zone": "560001",
+      "type": "Heavy Rain",
+      "value": "45mm",
+      "threshold": "> 40mm",
+      "triggered": true,
+      "timestamp": "2023-11-20T10:05:00Z"
+    },
+    {
+      "id": "D102",
+      "zone": "560001",
+      "type": "Heatwave",
+      "value": "38°C",
+      "threshold": "> 42°C",
+      "triggered": false,
+      "timestamp": "2023-11-20T10:05:00Z"
+    },
+    {
+      "id": "D103",
+      "zone": "560001",
+      "type": "AQI",
+      "value": "150",
+      "threshold": "> 350",
+      "triggered": false,
+      "timestamp": "2023-11-20T10:05:00Z"
+    },
+    {
+      "id": "D104",
+      "zone": "560001",
+      "type": "Traffic",
+      "value": "8 km/h",
+      "threshold": "< 10 km/h",
+      "triggered": true,
+      "timestamp": "2023-11-20T10:05:00Z"
+    }
+  ],
+  "claims": [
+    {
+      "id": "C2041",
+      "worker_id": "W1001",
+      "disruption_type": "Heavy Rain",
+      "amount": 300,
+      "ccss_score": 25,
+      "status": "APPROVED",
+      "timestamp": "2023-11-19T14:30:00Z"
+    },
+    {
+      "id": "C2042",
+      "worker_id": "W1001",
+      "disruption_type": "Traffic",
+      "amount": 150,
+      "ccss_score": 65,
+      "status": "FLAGGED",
+      "timestamp": "2023-11-12T09:15:00Z"
+    }
+  ],
+  "zones": [
+    {
+      "id": "Z1",
+      "pincode": "560001",
+      "city": "Bengaluru",
+      "tier": 3,
+      "risk_level": "Moderate",
+      "base_premium": 25,
+      "disruption_probability": 35
+    },
+    {
+      "id": "Z2",
+      "pincode": "560034",
+      "city": "Bengaluru",
+      "tier": 1,
+      "risk_level": "Low",
+      "base_premium": 15,
+      "disruption_probability": 10
+    },
+    {
+      "id": "Z3",
+      "pincode": "560068",
+      "city": "Bengaluru",
+      "tier": 5,
+      "risk_level": "Severe",
+      "base_premium": 35,
+      "disruption_probability": 80
+    }
+  ]
+}
