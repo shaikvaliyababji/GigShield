@@ -10,6 +10,9 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
+      workbox: {
+        maximumFileSizeToCacheInBytes: 5000000 // 5 MB
+      },
       manifest: {
         name: 'GigShield AI',
         short_name: 'GigShield',

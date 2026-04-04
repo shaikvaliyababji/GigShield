@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { 
-  ArrowLeft, Check, X, ShieldCheck, 
+  ArrowLeft, Check, X, 
   ArrowRight, Activity, Shield as ShieldIcon, Lock as LockIcon,
   ChevronRight
 } from 'lucide-react';
