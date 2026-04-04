@@ -41,7 +41,8 @@ export default function PaymentProfile() {
     if (step === 'payment') {
       // Perform actual payment update on backend
       try {
-        const resp = await fetch(`http://localhost:8080/workers/${user.id}`, {
+        const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
+        const resp = await fetch(`${API_URL}/workers/${user.id}`, {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

@@ -28,7 +28,8 @@ export default function Dashboard() {
   const fetchPayouts = async (userId: string) => {
     setIsLoadingHistory(true);
     try {
-      const resp = await fetch(`http://localhost:8080/claims?worker_id=${userId}`);
+      const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
+      const resp = await fetch(`${API_URL}/claims?worker_id=${userId}`);
       if (resp.ok) {
         const data = await resp.json();
         setPayouts(data);

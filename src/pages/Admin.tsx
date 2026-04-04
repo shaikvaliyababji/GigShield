@@ -21,7 +21,7 @@ L.Icon.Default.mergeOptions({
 
 type Tab = 'overview' | 'workers' | 'payouts' | 'plans' | 'fraud' | 'zones' | 'fleet' | 'settings';
 
-const API_URL = "http://localhost:8080";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
 
 export default function AdminPortal() {
   const [activeTab, setActiveTab] = useState<Tab>('overview');
