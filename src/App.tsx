@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Landing from './pages/Landing';
 import Onboarding from './pages/Onboarding';
@@ -8,7 +9,16 @@ import Coverage from './pages/Coverage';
 import PaymentProfile from './pages/PaymentProfile';
 import './index.css';
 
+const API_URL = import.meta.env.VITE_API_URL || 'https://gigshieldbackend.onrender.com';
+
 function App() {
+  // Wake up the Render free-tier backend on app load so it's warm before login/signup
+  useEffect(() => {
+    fetch(`${API_URL}/workers`, { method: 'GET' }).catch(() => {
+      // Silently ignore — this is just a warm-up ping
+    });
+  }, []);
+
   return (
     <Router>
       <Routes>

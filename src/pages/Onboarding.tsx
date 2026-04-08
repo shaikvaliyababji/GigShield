@@ -109,7 +109,12 @@ export default function Onboarding() {
         navigate(currentRole === 'admin' ? '/admin' : '/dashboard');
       }
     } catch (err: any) {
-      setError(err.message);
+      // Handle Render free-tier cold start (ERR_FAILED / network error)
+      if (err instanceof TypeError && err.message.toLowerCase().includes('fail')) {
+        setError("Server is waking up — please wait 30 seconds and try again.");
+      } else {
+        setError(err.message);
+      }
     } finally {
       setIsLoading(false);
     }
